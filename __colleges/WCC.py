@@ -171,7 +171,7 @@ def continue_app(driver, student: Student.Student):
 
     Select(driver.find_element_by_id(
         'ctl00_mainContent_ApplicationForm_ApplicationForm_ApplicationFormControl_w45_preferdayoreveningcourses_w45_preferdayoreveningcourses'))\
-        .select_by_index(random.randint(0, 3))
+        .select_by_index(random.randint(1, 3))
 
     Select(driver.find_element_by_id(
         'ctl00_mainContent_ApplicationForm_ApplicationForm_ApplicationFormControl_w45_parentguardian1highestlevelofeducation_w45_parentguardian1highestlevelofeducation')).select_by_index(random.randint(1, 6))
