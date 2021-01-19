@@ -15,6 +15,12 @@ It will download all required packages and webdrivers automatically based on you
 	  python3 bot.py
 Follow the instructions to get started with generating your own edu email
 
+After a few days you should receive some kind of welcome email.
+To check emails run:
+
+    python3 check_emails.py
+
+
 ## ***Request a college***
 
 Know a college that offers edu emails? Create a new issue with the 'new college' label.
