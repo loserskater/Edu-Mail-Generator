@@ -1,7 +1,6 @@
 # Edu-Mail-Generator
 Generate Free Edu Mail(s) within minutes
 
-## Only For Educational Purpose ##
 ## ***Requirements***
 
 - Python `3.7 or >`

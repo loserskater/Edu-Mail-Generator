@@ -1,15 +1,9 @@
-import subprocess
-import sys
 from __dwnldDrivers.versions import *
 
-######## This script is only for educational purpose ########
-######## use it on your own RISK ########
-######## I'm not responsible for any loss or damage ########
-######## caused to you using this script ########
-######## Github Repo - https://git.io/JJisT/ ########
 
 def install(name):
     subprocess.check_call([sys.executable, '-m', 'pip', 'install', name])
+
 
 def main():
 

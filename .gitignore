@@ -2,7 +2,12 @@
 __pycache__/
 *.py[cod]
 
-#### Debug Files ####
-play.py
-play1.py
-play2.py
+*.log
+
+/selenium
+/.idea
+/venv
+/webdriver/*.crx
+/webdriver/*.xpi
+webdriver/chromedriver.exe
+webdriver/geckodriver.exe
