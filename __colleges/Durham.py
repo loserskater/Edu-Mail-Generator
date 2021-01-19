@@ -6,7 +6,10 @@ from selenium.webdriver.support import expected_conditions as EC
 import random
 import Student
 
-
+# ,
+#     'Durham Tech': {
+#         'url': 'https://auth.cfnc.org/Identity/Account/Register'
+#     }
 def apply(driver, student):
     WebDriverWait(driver, 10).until(
         EC.element_to_be_clickable((By.ID, "login_id"))

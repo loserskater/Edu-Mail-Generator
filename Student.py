@@ -27,9 +27,6 @@ allColleges = {
     },
     'Lansing College': {
         'url': 'https://starnetb.lcc.edu/LCCB/bwskalog.p_disploginnew?in_id=&cpbl=&newid='
-    },
-    'Durham Tech': {
-        'url': 'https://auth.cfnc.org/Identity/Account/Register'
     }
 }
 
