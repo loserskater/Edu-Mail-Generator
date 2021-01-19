@@ -11,3 +11,4 @@ __pycache__/
 /webdriver/*.xpi
 webdriver/chromedriver.exe
 webdriver/geckodriver.exe
+/students.txt
