@@ -267,7 +267,7 @@ def continue_app(driver, student: Student.Student):
         .select_by_index(1)
 
     WebDriverWait(driver, 10).until(
-        EC.presence_of_element_located((By.NAME, "ctl00$mainContent$ApplicationForm$ApplicationForm$ctl01"))
+        EC.element_to_be_clickable((By.NAME, "ctl00$mainContent$ApplicationForm$ApplicationForm$ctl01"))
     ).click()
 
     print(' (Success)\n6/6 - Writing & Signature', end='')
