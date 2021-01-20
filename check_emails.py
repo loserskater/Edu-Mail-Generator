@@ -1,16 +1,19 @@
 import os
 import webbrowser
 from time import sleep
+import json
+from types import SimpleNamespace
 
 emails = ["Check All"]
 
 
 def get_emails():
     with open('students.txt', 'r') as f:
-        accounts = f.readlines()
+        lines = f.readlines()
 
-    for line in accounts:
-        emails.append(line.split('"college": "')[1].split('"')[0] + ' - ' + line.split('"email": "')[1].split('"')[0])
+    for line in lines:
+        student = json.loads(line, object_hook=lambda d: SimpleNamespace(**d))
+        emails.append(student.college + ' - ' + student.email)
 
 
 def main():
