@@ -229,10 +229,10 @@ def apply(driver, student):
         'inputEduGoal')) \
         .select_by_value('B')
 
-    if student.college == 'Southwestern College':
+    if student.college == 'Southwestern College' or student.college == 'Cañada College':
         Select(driver.find_element_by_id(
             'inputMajorCategory')) \
-            .select_by_index(random.randint(1, 12))
+            .select_by_index(random.randint(1, 5))
 
     WebDriverWait(driver, 10).until(
         EC.element_to_be_clickable((By.ID, 'inputMajorId'))
@@ -319,7 +319,7 @@ def apply(driver, student):
     WebDriverWait(driver, 10).until(
         EC.element_to_be_clickable((By.ID, 'hs-suggestions'))
     )
-    time.sleep(1)
+    time.sleep(2)
 
     parent = driver.find_element_by_class_name('autocomplete-menu')
     schools = parent.find_elements_by_tag_name("li")

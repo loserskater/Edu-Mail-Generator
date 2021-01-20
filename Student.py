@@ -26,6 +26,10 @@ allColleges = {
         'url': 'https://www.opencccapply.net/gateway/apply?cccMisCode=091',
         'state': 'CA'
     },
+    "Cañada College": {
+        'url': 'https://www.opencccapply.net/gateway/apply?cccMisCode=371',
+        'state': 'CA'
+    },
     'Westmoreland College': {
         'url': 'https://apply.westmoreland.edu/Datatel.ERecruiting.Web.External/Pages/createaccount.aspx',
         'state': 'PA'
