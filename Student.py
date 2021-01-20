@@ -11,22 +11,28 @@ from faker import Faker
 
 allColleges = {
     'Mendocino College': {
-        'url': 'https://www.opencccapply.net/gateway/apply?cccMisCode=141'
+        'url': 'https://www.opencccapply.net/gateway/apply?cccMisCode=141',
+        'state': 'CA'
     },
     'Contra Costa College': {
-        'url': 'https://www.opencccapply.net/gateway/apply?cccMisCode=311'
+        'url': 'https://www.opencccapply.net/gateway/apply?cccMisCode=311',
+        'state': 'CA'
     },
     'Antelope Valley College': {
-        'url': 'https://www.opencccapply.net/gateway/apply?cccMisCode=621'
+        'url': 'https://www.opencccapply.net/gateway/apply?cccMisCode=621',
+        'state': 'CA'
     },
     'Southwestern College': {
-        'url': 'https://www.opencccapply.net/gateway/apply?cccMisCode=091'
+        'url': 'https://www.opencccapply.net/gateway/apply?cccMisCode=091',
+        'state': 'CA'
     },
     'Westmoreland College': {
-        'url': 'https://apply.westmoreland.edu/Datatel.ERecruiting.Web.External/Pages/createaccount.aspx'
+        'url': 'https://apply.westmoreland.edu/Datatel.ERecruiting.Web.External/Pages/createaccount.aspx',
+        'state': 'PA'
     },
     'Lansing College': {
-        'url': 'https://starnetb.lcc.edu/LCCB/bwskalog.p_disploginnew?in_id=&cpbl=&newid='
+        'url': 'https://starnetb.lcc.edu/LCCB/bwskalog.p_disploginnew?in_id=&cpbl=&newid=',
+        'state': 'MI'
     }
 }
 
@@ -114,16 +120,15 @@ def get_new_address(student):
     with open('addresses.json', 'r') as f:
         addresses = json.load(f, object_hook=lambda d: SimpleNamespace(**d))
 
-    while True:
-        address = random.choice(addresses.addresses)
-        if address.address2 == '':
+    random.shuffle(addresses)
+
+    for address in addresses:
+        if address.state == allColleges.get(student.college).get('state'):
             student.streetAddress = address.address1
             student.cityAddress = address.city
             student.stateAddress = address.state
             student.postalCode = address.postalCode
             break
-        else:
-            continue
 
 
 def save_student(student):
