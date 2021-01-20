@@ -324,7 +324,7 @@ def apply(driver, student):
     parent = driver.find_element_by_class_name('autocomplete-menu')
     schools = parent.find_elements_by_tag_name("li")
 
-    schools[random.randint(2, len(schools))].click()
+    schools[random.randint(2, len(schools)-1)].click()
 
     WebDriverWait(driver, 10).until(
         EC.element_to_be_clickable((By.ID, 'inputGPA'))
